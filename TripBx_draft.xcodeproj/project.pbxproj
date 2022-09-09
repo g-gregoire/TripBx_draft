@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */; };
-		C7FF898728CBD71100221EBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* ContentView.swift */; };
+		C7FF898728CBD71100221EBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* HomeView.swift */; };
 		C7FF898928CBD71200221EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898828CBD71200221EBA /* Assets.xcassets */; };
 		C7FF898C28CBD71200221EBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898B28CBD71200221EBA /* Preview Assets.xcassets */; };
+		C7FF899928CBD8C100221EBA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF899828CBD8C100221EBA /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C7FF898128CBD71100221EBA /* TripBx_draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBx_draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBx_draftApp.swift; sourceTree = "<group>"; };
-		C7FF898628CBD71100221EBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7FF898628CBD71100221EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C7FF898828CBD71200221EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7FF898B28CBD71200221EBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C7FF899828CBD8C100221EBA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,11 @@
 			isa = PBXGroup;
 			children = (
 				C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */,
-				C7FF898628CBD71100221EBA /* ContentView.swift */,
+				C7FF899228CBD7EB00221EBA /* Views */,
+				C7FF899528CBD80000221EBA /* ViewModel */,
+				C7FF899328CBD7F200221EBA /* Models */,
+				C7FF899628CBD80600221EBA /* Resources */,
+				C7FF899728CBD81600221EBA /* Services */,
 				C7FF898828CBD71200221EBA /* Assets.xcassets */,
 				C7FF898A28CBD71200221EBA /* Preview Content */,
 			);
@@ -65,6 +71,43 @@
 				C7FF898B28CBD71200221EBA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C7FF899228CBD7EB00221EBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7FF898628CBD71100221EBA /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C7FF899328CBD7F200221EBA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7FF899828CBD8C100221EBA /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C7FF899528CBD80000221EBA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C7FF899628CBD80600221EBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7FF899728CBD81600221EBA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7FF898728CBD71100221EBA /* ContentView.swift in Sources */,
+				C7FF899928CBD8C100221EBA /* Models.swift in Sources */,
+				C7FF898728CBD71100221EBA /* HomeView.swift in Sources */,
 				C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
