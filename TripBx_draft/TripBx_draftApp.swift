@@ -12,6 +12,7 @@ struct TripBx_draftApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .environmentObject(TripModel())
         }
     }
 }

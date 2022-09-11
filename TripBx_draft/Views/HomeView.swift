@@ -8,14 +8,54 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject var model: TripModel
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text("Here are your Squads:")
+                    .padding()
+                
+                ScrollView {
+                    
+                    LazyVStack (spacing: 0) {
+                    
+                        ForEach(model.squads) { squad in
+                            
+                            NavigationLink(
+                                destination:
+                                    SquadView()
+                                    .onAppear(perform: {
+                                        model.openTrip(squad.id)
+                                    }),
+                                tag: squad.id,
+                                selection: $model.currentSquadSelected) {
+                                    
+                                    Text("Hello")
+                                    // Squad Card
+//                                    SquadCardView(name: squad.name, desc: squad.description!, image: squad.image!, memberCount: squad.users!.count)
+                                    
+                                }
+                            
+                            
+                        }
+                    }
+                }
+                
+                
+            }
+            .navigationTitle("Good Day!")
+        }
+        .navigationViewStyle(.stack)
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+            .environmentObject(TripModel())
     }
 }

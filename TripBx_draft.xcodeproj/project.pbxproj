@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C70056D528CE8B7C00A22170 /* SquadCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70056D428CE8B7C00A22170 /* SquadCardView.swift */; };
+		C70056D728CE91E600A22170 /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70056D628CE91E600A22170 /* SquadView.swift */; };
+		C70056D928CE93CF00A22170 /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70056D828CE93CF00A22170 /* TripCardView.swift */; };
+		C70056DB28CE94B300A22170 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70056DA28CE94B300A22170 /* TripView.swift */; };
 		C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */; };
 		C7FF898728CBD71100221EBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* HomeView.swift */; };
 		C7FF898928CBD71200221EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898828CBD71200221EBA /* Assets.xcassets */; };
 		C7FF898C28CBD71200221EBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898B28CBD71200221EBA /* Preview Assets.xcassets */; };
 		C7FF899928CBD8C100221EBA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF899828CBD8C100221EBA /* Models.swift */; };
+		C7FF899B28CBDC3000221EBA /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF899A28CBDC3000221EBA /* TripModel.swift */; };
+		C7FF899D28CBDCF200221EBA /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = C7FF899C28CBDCF200221EBA /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70056D428CE8B7C00A22170 /* SquadCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadCardView.swift; sourceTree = "<group>"; };
+		C70056D628CE91E600A22170 /* SquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
+		C70056D828CE93CF00A22170 /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
+		C70056DA28CE94B300A22170 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
 		C7FF898128CBD71100221EBA /* TripBx_draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBx_draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBx_draftApp.swift; sourceTree = "<group>"; };
 		C7FF898628CBD71100221EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C7FF898828CBD71200221EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7FF898B28CBD71200221EBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7FF899828CBD8C100221EBA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		C7FF899A28CBDC3000221EBA /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		C7FF899C28CBDCF200221EBA /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				C7FF898628CBD71100221EBA /* HomeView.swift */,
+				C70056D428CE8B7C00A22170 /* SquadCardView.swift */,
+				C70056D628CE91E600A22170 /* SquadView.swift */,
+				C70056D828CE93CF00A22170 /* TripCardView.swift */,
+				C70056DA28CE94B300A22170 /* TripView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,6 +108,7 @@
 		C7FF899528CBD80000221EBA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C7FF899A28CBDC3000221EBA /* TripModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -99,6 +116,7 @@
 		C7FF899628CBD80600221EBA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C7FF899C28CBDCF200221EBA /* data.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7FF898C28CBD71200221EBA /* Preview Assets.xcassets in Resources */,
+				C7FF899D28CBDCF200221EBA /* data.json in Resources */,
 				C7FF898928CBD71200221EBA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,8 +200,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7FF899928CBD8C100221EBA /* Models.swift in Sources */,
+				C70056D728CE91E600A22170 /* SquadView.swift in Sources */,
 				C7FF898728CBD71100221EBA /* HomeView.swift in Sources */,
+				C70056DB28CE94B300A22170 /* TripView.swift in Sources */,
+				C70056D528CE8B7C00A22170 /* SquadCardView.swift in Sources */,
+				C7FF899B28CBDC3000221EBA /* TripModel.swift in Sources */,
 				C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */,
+				C70056D928CE93CF00A22170 /* TripCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

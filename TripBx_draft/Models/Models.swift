@@ -13,7 +13,8 @@ struct Squad: Decodable, Identifiable {
     var name: String
     var description: String?
     var image:String?
-    var users: [User]
+    var users: [User]?
+    var trips: [Trip]?
     
 }
 
@@ -21,7 +22,6 @@ struct User: Decodable, Identifiable {
     
     var id: Int
     var name: String
-    var email: String
     
 }
 
@@ -31,7 +31,9 @@ struct Trip: Decodable, Identifiable {
     var name: String
     var description: String?
     var image:String?
-    var squadID: Int
+    var albumID: Int
+    var users: [User]?
+    var photos: [Photo]
     
 }
 
@@ -39,8 +41,7 @@ struct Trip: Decodable, Identifiable {
 struct Album: Decodable, Identifiable {
     
     var id: Int
-    var photos: Photo.ID
-    var tripID: Int
+    var photos: [Photo]
     
 }
 
@@ -52,8 +53,5 @@ struct Photo: Decodable, Identifiable {
     var dateAdded: Date
     var addedBy: User.ID
     var tripID: Int
-    
-}
-    
     
 }
