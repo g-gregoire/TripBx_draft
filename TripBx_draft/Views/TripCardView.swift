@@ -31,13 +31,13 @@ struct TripCardView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .shadow(radius: 5)
-                .aspectRatio(CGSize(width: 335, height: 175), contentMode: .fit)
+                .aspectRatio(CGSize(width: 335, height: 110), contentMode: .fit)
             
             HStack {
 
                 Image(trip.image!)
                     .resizable()
-                    .frame(width: 116, height: 116)
+                    .frame(width: 95, height: 95)
                     .clipShape(Circle())
                 
                 Spacer()
@@ -46,7 +46,7 @@ struct TripCardView: View {
                     Text(trip.name)
                         .bold()
                     Text(trip.description!)
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 10)
                         .font(.caption)
                     
                     // Icons
@@ -65,7 +65,7 @@ struct TripCardView: View {
             }
             .padding(.horizontal, 20)
         }
-        .padding(10)
+        .padding(5)
         
     }
 }

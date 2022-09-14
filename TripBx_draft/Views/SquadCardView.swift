@@ -22,13 +22,13 @@ struct SquadCardView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .shadow(radius: 5)
-                .aspectRatio(CGSize(width: 335, height: 175), contentMode: .fit)
+                .aspectRatio(CGSize(width: 335, height: 110), contentMode: .fit)
             
             HStack {
 
                 Image(image)
                     .resizable()
-                    .frame(width: 116, height: 116)
+                    .frame(width: 95, height: 95)
                     .clipShape(Circle())
                 
                 Spacer()
@@ -37,26 +37,24 @@ struct SquadCardView: View {
                     Text(name)
                         .bold()
                     Text(desc)
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 10)
                         .font(.caption)
                     
                     // Icons
                     HStack {
-                        
                         // Number of lessons/questions
                         Image(systemName: "person.2")
                             .resizable()
                             .frame(width: 15, height: 15)
                         Text("Members: \(String(memberCount))")
                             .font(Font.system(size: 10))
-                        
                     }
                 }
                 Spacer()
             }
             .padding(.horizontal, 20)
         }
-        .padding(10)
+        .padding(5)
         
     }
 }

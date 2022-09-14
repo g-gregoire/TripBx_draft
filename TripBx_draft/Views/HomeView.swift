@@ -28,16 +28,16 @@ struct HomeView: View {
                                 destination:
                                     SquadView()
                                     .onAppear(perform: {
-                                        model.openTrip(squad.id)
+                                        model.openSquad(squad.id)
                                     }),
                                 tag: squad.id,
                                 selection: $model.currentSquadSelected) {
-                                    
-                                    Text("Hello")
                                     // Squad Card
-//                                    SquadCardView(name: squad.name, desc: squad.description!, image: squad.image!, memberCount: squad.users!.count)
+                                    SquadCardView(name: squad.name, desc: squad.description!, image: squad.image!, memberCount: squad.users!.count)
+                                        .padding(.horizontal, 10)
                                     
                                 }
+                                .accentColor(.black)
                             
                             
                         }

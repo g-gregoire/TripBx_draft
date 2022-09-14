@@ -77,12 +77,12 @@ class TripModel: ObservableObject {
         currentSquad = squads[currentSquadIndex]
     }
     
-    func openTrip(_ tripID:Int) {
+    func openTrip(_ squadID:Int, _ tripID:Int) {
         
         // Find the index for this module id
-        for index in 0..<trips.count {
+        for index in 0..<squads[squadID].trips!.count {
             
-            if trips[index].id == tripID {
+            if squads[squadID].trips![index].id == tripID {
             
                 // Found the matching module
                 currentTripIndex = index
@@ -91,6 +91,6 @@ class TripModel: ObservableObject {
         }
         
         // Set the current module
-        currentTrip = trips[currentTripIndex]
+        currentTrip = squads[squadID].trips![currentTripIndex]
     }
 }

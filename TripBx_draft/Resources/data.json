@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "name": "All the Friends",
         "description": "Just a bunch of kids",
         "image" : "squad1",
@@ -12,26 +12,26 @@
             {"id": 5, "name": "Natalie Wolf"}
         ],
         "trips": [
-            {"id": 1, "name": "BC Trip 2020", "description": "BC Trip 2020", "image": "trip1", "albumID": 1},
-            {"id": 2, "name": "Bali Vacay :)", "description": "Beach Life", "image": "trip2", "albumID": 2},
-            {"id": 3, "name": "Road Trip 2019", "description": "Rockies Road Trip", "image": "trip3", "albumID": 3}
+            {"id": 0, "name": "BC Trip 2020", "description": "BC Trip 2020", "image": "trip1", "albumID": 1, "users": [], "photos": []},
+            {"id": 1, "name": "Bali Vacay :)", "description": "Beach Life", "image": "trip2", "albumID": 2, "users": [], "photos": []},
+            {"id": 2, "name": "Road Trip 2019", "description": "Rockies Road Trip", "image": "trip3", "albumID": 3, "users": [], "photos": []}
         ]
     },
     {
-        "id": 2,
+        "id": 1,
         "name": "Thursday Good Vibe Tribe",
         "description": "Thursday Dinner Group",
         "image" : "squad2",
         "users": [
             {"id": 1, "name": "Georges G"},
-            {"id": 3, "name": "Cadence P"},
+            {"id": 2, "name": "Cadence P"},
             {"id": 5, "name": "Owen"},
-            {"id": 8, "name": "Daniel Byrnes"},
-            {"id": 9, "name": "Natalie Wolf"}
+            {"id": 6, "name": "Daniel Byrnes"},
+            {"id": 7, "name": "Natalie Wolf"}
         ],
         "trips": [
-            {"id": 4, "name": "Food Festival", "description": "nom nom nom", "image": "trip4", "albumID": 4},
-            {"id": 5, "name": "Eataly Trip", "description": "Vida Loca", "image": "trip5", "albumID": 5}
+            {"id": 0, "name": "Food Festival", "description": "nom nom nom", "image": "trip4", "albumID": 4, "users": [], "photos": []},
+            {"id": 1, "name": "Eataly Trip", "description": "Vida Loca", "image": "trip5", "albumID": 5, "users": [], "photos": []}
         ]
     }
 ]

@@ -10,35 +10,42 @@ import SwiftUI
 struct SquadView: View {
     
     @EnvironmentObject var model: TripModel
+    
     var body: some View {
         
-        ScrollView {
+        VStack(alignment: .leading, spacing: 0) {
             
-            LazyVStack {
+            Text("Here are your trips!")
+                .padding([.top, .horizontal], 20)
+            
+            ScrollView {
                 
-                // Confirm that currentModule is set
-                if model.currentSquad != nil {
-                
-                    ForEach(0..<model.currentSquad!.trips!.count) { index in
-                        
-                        NavigationLink(
-                            destination:
-                                TripView()
-                                    .onAppear(perform: {
-                                        model.openTrip(index)
-                                    }),
-                            label: {
-                                TripCardView(index: index)
-                            })
-                        
+                LazyVStack(spacing: 0) {
+                    
+                    // Confirm that currentModule is set
+                    if model.currentSquad != nil {
+                    
+                        ForEach(0..<model.currentSquad!.trips!.count) { index in
+                            
+                            NavigationLink(
+                                destination:
+                                    TripView(index: index)
+                                        .onAppear(perform: {
+                                            model.openTrip(model.currentSquadIndex, index)
+                                        }),
+                                label: {
+                                    TripCardView(index: index)
+                                })
+                            
+                        }
                     }
                 }
-            }
-            .accentColor(.black)
-            .padding()
-            .navigationBarTitle("\(model.currentSquad?.name ?? "")")
-            
+                .accentColor(.black)
+                .padding()
+                .navigationBarTitle("\(model.currentSquad?.name ?? "")")
+                
 
+            }
         }
     }
 }
@@ -46,5 +53,6 @@ struct SquadView: View {
 struct SquadView_Previews: PreviewProvider {
     static var previews: some View {
         SquadView()
+            .environmentObject(TripModel())
     }
 }
