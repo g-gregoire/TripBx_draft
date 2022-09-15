@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct SquadListView: View {
     
     @EnvironmentObject var model: TripModel
     
@@ -55,7 +55,7 @@ struct HomeView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        SquadListView()
             .environmentObject(TripModel())
     }
 }

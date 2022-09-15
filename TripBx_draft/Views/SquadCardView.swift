@@ -50,7 +50,9 @@ struct SquadCardView: View {
                             .font(Font.system(size: 10))
                     }
                 }
-                Spacer()
+                .frame(width: 200, height: 95, alignment: .leading)
+                
+                
             }
             .padding(.horizontal, 20)
         }

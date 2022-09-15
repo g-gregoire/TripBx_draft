@@ -11,7 +11,7 @@ import SwiftUI
 struct TripBx_draftApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            MainTabView(tabIndex: 0)
                 .environmentObject(TripModel())
         }
     }

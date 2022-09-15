@@ -11,8 +11,12 @@
 		C70056D728CE91E600A22170 /* SquadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70056D628CE91E600A22170 /* SquadView.swift */; };
 		C70056D928CE93CF00A22170 /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70056D828CE93CF00A22170 /* TripCardView.swift */; };
 		C70056DB28CE94B300A22170 /* TripView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70056DA28CE94B300A22170 /* TripView.swift */; };
+		C701114528D27D3E00C0159D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701114428D27D3E00C0159D /* MainTabView.swift */; };
+		C701114728D27EBC00C0159D /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701114628D27EBC00C0159D /* TripListView.swift */; };
+		C701114928D27F1600C0159D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701114828D27F1600C0159D /* AccountView.swift */; };
+		C701114B28D27F2E00C0159D /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701114A28D27F2E00C0159D /* AlbumView.swift */; };
 		C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */; };
-		C7FF898728CBD71100221EBA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* HomeView.swift */; };
+		C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* SquadListView.swift */; };
 		C7FF898928CBD71200221EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898828CBD71200221EBA /* Assets.xcassets */; };
 		C7FF898C28CBD71200221EBA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898B28CBD71200221EBA /* Preview Assets.xcassets */; };
 		C7FF899928CBD8C100221EBA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF899828CBD8C100221EBA /* Models.swift */; };
@@ -25,9 +29,13 @@
 		C70056D628CE91E600A22170 /* SquadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadView.swift; sourceTree = "<group>"; };
 		C70056D828CE93CF00A22170 /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		C70056DA28CE94B300A22170 /* TripView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripView.swift; sourceTree = "<group>"; };
+		C701114428D27D3E00C0159D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		C701114628D27EBC00C0159D /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
+		C701114828D27F1600C0159D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		C701114A28D27F2E00C0159D /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		C7FF898128CBD71100221EBA /* TripBx_draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBx_draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBx_draftApp.swift; sourceTree = "<group>"; };
-		C7FF898628CBD71100221EBA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C7FF898628CBD71100221EBA /* SquadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadListView.swift; sourceTree = "<group>"; };
 		C7FF898828CBD71200221EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7FF898B28CBD71200221EBA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C7FF899828CBD8C100221EBA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -88,11 +96,15 @@
 		C7FF899228CBD7EB00221EBA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C7FF898628CBD71100221EBA /* HomeView.swift */,
+				C701114428D27D3E00C0159D /* MainTabView.swift */,
+				C7FF898628CBD71100221EBA /* SquadListView.swift */,
 				C70056D428CE8B7C00A22170 /* SquadCardView.swift */,
 				C70056D628CE91E600A22170 /* SquadView.swift */,
+				C701114628D27EBC00C0159D /* TripListView.swift */,
 				C70056D828CE93CF00A22170 /* TripCardView.swift */,
 				C70056DA28CE94B300A22170 /* TripView.swift */,
+				C701114828D27F1600C0159D /* AccountView.swift */,
+				C701114A28D27F2E00C0159D /* AlbumView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,8 +213,12 @@
 			files = (
 				C7FF899928CBD8C100221EBA /* Models.swift in Sources */,
 				C70056D728CE91E600A22170 /* SquadView.swift in Sources */,
-				C7FF898728CBD71100221EBA /* HomeView.swift in Sources */,
+				C701114528D27D3E00C0159D /* MainTabView.swift in Sources */,
+				C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */,
+				C701114928D27F1600C0159D /* AccountView.swift in Sources */,
 				C70056DB28CE94B300A22170 /* TripView.swift in Sources */,
+				C701114B28D27F2E00C0159D /* AlbumView.swift in Sources */,
+				C701114728D27EBC00C0159D /* TripListView.swift in Sources */,
 				C70056D528CE8B7C00A22170 /* SquadCardView.swift in Sources */,
 				C7FF899B28CBDC3000221EBA /* TripModel.swift in Sources */,
 				C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */,
