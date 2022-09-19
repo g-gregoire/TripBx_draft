@@ -10,18 +10,11 @@ import SwiftUI
 struct TripView: View {
     
     @EnvironmentObject var model: TripModel
-    var index: Int
+    var squadIndex: Int
+    var tripIndex: Int
     
-    // Create instance of trip for more concise vars
     var trip: Trip {
-        
-        if model.currentSquad != nil &&
-            index < model.currentSquad!.trips!.count {
-            return model.currentSquad!.trips![index]
-        }
-        else {
-            return Trip(id: 0, name: "", description: "", image: "", albumID: -1, photos: [])
-        }
+        return model.squads[squadIndex].trips![tripIndex]
     }
     
     var body: some View {
@@ -54,6 +47,6 @@ struct TripView: View {
 
 struct TripView_Previews: PreviewProvider {
     static var previews: some View {
-        TripView(index: 1)
+        TripView(squadIndex: 1, tripIndex: 1)
     }
 }

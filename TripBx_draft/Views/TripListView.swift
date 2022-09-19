@@ -25,18 +25,23 @@ struct TripListView: View {
                     // Confirm that currentModule is set
                     if model.currentSquad != nil {
                     
-                        ForEach(0..<model.currentSquad!.trips!.count) { index in
+                        ForEach(0..<model.squads.count) { squadIndex in
                             
-                            NavigationLink(
-                                destination:
-                                    TripView(index: index)
-                                        .onAppear(perform: {
-                                            model.openTrip(model.currentSquadIndex, index)
-                                        }),
-                                label: {
-                                    TripCardView(index: index)
-                                })
-                            
+                            ForEach(0..<model.squads[squadIndex].trips!.count) { tripIndex in
+                                
+                                
+                                TripCardView(squadIndex: squadIndex, tripIndex: tripIndex)
+//                                NavigationLink(
+//                                    destination:
+//                                        TripView(index: index)
+//                                            .onAppear(perform: {
+//                                                model.openTrip(model.currentSquadIndex, index)
+//                                            }),
+//                                    label: {
+//                                        TripCardView(index: index)
+//                                    })
+                                
+                            }
                         }
                     }
                 }

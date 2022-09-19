@@ -23,20 +23,20 @@ struct SquadView: View {
                 LazyVStack(spacing: 0) {
                     
                     // Confirm that currentModule is set
-                    if model.currentSquad != nil {
-                    
-                        ForEach(0..<model.currentSquad!.trips!.count) { index in
+                    if model.currentSquad != nil && model.currentSquadSelected != nil  {
+                        
+                        let tripCount = model.squads[model.currentSquadSelected!].trips!.count
+                        ForEach(0..<tripCount) { tripIndex in
                             
                             NavigationLink(
                                 destination:
-                                    TripView(index: index)
+                                    TripView(squadIndex: model.currentSquadSelected!, tripIndex: tripIndex)
                                         .onAppear(perform: {
-                                            model.openTrip(model.currentSquadIndex, index)
+                                            model.openTrip(model.currentSquadSelected!, tripIndex)
                                         }),
                                 label: {
-                                    TripCardView(index: index)
+                                    TripCardView(squadIndex: model.currentSquadSelected!, tripIndex: tripIndex)
                                 })
-                            
                         }
                     }
                 }

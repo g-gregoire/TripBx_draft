@@ -54,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C701114C28D7AFF900C0159D /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				C70056D428CE8B7C00A22170 /* SquadCardView.swift */,
+				C70056D828CE93CF00A22170 /* TripCardView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		C7FF897828CBD71100221EBA = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +84,7 @@
 			children = (
 				C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */,
 				C7FF899228CBD7EB00221EBA /* Views */,
+				C701114C28D7AFF900C0159D /* SubViews */,
 				C7FF899528CBD80000221EBA /* ViewModel */,
 				C7FF899328CBD7F200221EBA /* Models */,
 				C7FF899628CBD80600221EBA /* Resources */,
@@ -98,10 +108,8 @@
 			children = (
 				C701114428D27D3E00C0159D /* MainTabView.swift */,
 				C7FF898628CBD71100221EBA /* SquadListView.swift */,
-				C70056D428CE8B7C00A22170 /* SquadCardView.swift */,
 				C70056D628CE91E600A22170 /* SquadView.swift */,
 				C701114628D27EBC00C0159D /* TripListView.swift */,
-				C70056D828CE93CF00A22170 /* TripCardView.swift */,
 				C70056DA28CE94B300A22170 /* TripView.swift */,
 				C701114828D27F1600C0159D /* AccountView.swift */,
 				C701114A28D27F2E00C0159D /* AlbumView.swift */,

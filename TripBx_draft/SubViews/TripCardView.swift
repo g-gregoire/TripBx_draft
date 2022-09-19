@@ -10,17 +10,11 @@ import SwiftUI
 struct TripCardView: View {
     
     @EnvironmentObject var model: TripModel
-    var index: Int
+    var squadIndex: Int
+    var tripIndex: Int
     
     var trip: Trip {
-        
-        if model.currentSquad != nil &&
-            index < model.currentSquad!.trips!.count {
-            return model.currentSquad!.trips![index]
-        }
-        else {
-            return Trip(id: 0, name: "", description: "", image: "", albumID: -1, photos: [])
-        }
+        return model.squads[squadIndex].trips![tripIndex]
     }
     
     var body: some View {
@@ -72,6 +66,6 @@ struct TripCardView: View {
 
 struct TripCardView_Previews: PreviewProvider {
     static var previews: some View {
-        TripCardView(index: 1)
+        TripCardView(squadIndex: 1, tripIndex: 1)
     }
 }

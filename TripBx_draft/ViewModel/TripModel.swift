@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TripModel: ObservableObject {
+class TripModel: ObservableObject, Identifiable {
     
     // List of Squads
     @Published var squads = [Squad]()

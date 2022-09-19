@@ -19,8 +19,8 @@ struct MainTabView: View {
             SquadListView()
                 .tabItem {
                     VStack{
-                        Image(systemName: "person.3.fill")
-                        Text("Squads")
+                        Image(systemName: "house.fill")
+                        Text("Home")
                     }
                 }
                 .tag(0)
@@ -37,8 +37,8 @@ struct MainTabView: View {
             AlbumView()
                 .tabItem {
                     VStack{
-                        Image(systemName: "photo.on.rectangle.angled")
-                        Text("Photos")
+                        Image(systemName: "dollarsign.square")
+                        Text("Split")
                     }
                 }
                 .tag(2)
@@ -48,7 +48,7 @@ struct MainTabView: View {
                     VStack{
                         //Image(systemName: "line.3.horizontal.circle.fill")person.circle.fill
                         Image(systemName: "person.circle.fill")
-                        Text("Settings")
+                        Text("Account")
                     }
                 }
                 .tag(3)
@@ -61,6 +61,7 @@ struct MainTabView: View {
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView(tabIndex: 1)
+        MainTabView(tabIndex: 0)
+            .environmentObject(TripModel())
     }
 }
