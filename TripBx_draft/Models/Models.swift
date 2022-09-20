@@ -49,9 +49,11 @@ struct Photo: Decodable, Identifiable {
     
     var id: Int
     var path: String
-    var filename: String
-    var dateAdded: Date
-    var addedBy: User.ID
-    var tripID: Int
+//    var filename: String
+//    var dateAdded: Date
+//    var addedBy: User.ID
+//    var tripID: Int
+    
+    
     
 }

@@ -26,6 +26,8 @@ class TripModel: ObservableObject, Identifiable {
     var currentTripIndex = 0
     @Published var currentTripSelected:Int?
     
+    @Published var imageData: Data?
+    
     init() {
         
         // Parse local included json data
@@ -56,6 +58,39 @@ class TripModel: ObservableObject, Identifiable {
             print("Couldn't parse local data")
         }
     }
+    
+    func getImageData(hostURL:String, photoPath:String) {
+        
+        let imageURL = hostURL + photoPath
+        
+        if let url = URL(string: imageURL) {
+            
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: url) { data, response, error in
+                
+                if error == nil {
+                    DispatchQueue.main.async {
+                        self.imageData = data!
+                    }
+                }
+            }
+            dataTask.resume()
+        }
+    }
+    
+//    func getRemoteData() {
+//
+//        let URLString = Constants.fileStoreURL
+//        let URL = URL(string: URLString)
+//
+//        guard URL != nil else {
+//            // Couldn't create url
+//            return
+//        }
+//
+//        let
+//
+//    }
     
     
     // MARK: - Squad navigation methods

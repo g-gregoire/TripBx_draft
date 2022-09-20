@@ -30,7 +30,7 @@ struct TripView: View {
                 
                 LazyVStack(spacing: 0) {
                     
-                    
+                    AlbumView()
                     
                 }
                 .accentColor(.black)
