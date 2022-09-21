@@ -12,13 +12,11 @@ struct AlbumView: View {
     @EnvironmentObject var model: TripModel
     var body: some View {
         
-//        let photoURL = Constants.fileStoreURL
-//        let photoPath = "2DCCFFED-F2CD-4B9F-B675-135A491D117F.JPG"
-        
         VStack {
             
             ScrollView {
-                if model.imagesData.count == 0 {
+                // Show scroll until 10 or half the images have loaded
+                if model.imagesData.count < 10 || model.imagesData.count < model.images.count/2 {
                     ProgressView()
                 }
                 else {

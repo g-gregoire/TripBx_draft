@@ -29,11 +29,12 @@ struct TripView: View {
                     .frame(width: geometry.size.width, height: geometry.size.height)
                     .clipped()
             }
-            .ignoresSafeArea(.all, edges: .top)
+            .frame(height: 150)
+//            .ignoresSafeArea(.all, edges: .top)
 //            .ignoresSafeArea()
             
-            Text(trip.name)
-                .font(.title)
+//            Text(trip.name)
+//                .font(.title)
             
             ScrollView {
                 
@@ -46,6 +47,8 @@ struct TripView: View {
                 .padding()
             }
         }
+        .navigationTitle(trip.name)
+//        .navigationBarHidden(true)
     }
 }
 
