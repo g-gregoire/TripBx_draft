@@ -16,7 +16,7 @@ struct MainTabView: View {
         
         TabView (selection: $tabIndex){
             
-            SquadListView()
+            TripListView()
                 .tabItem {
                     VStack{
                         Image(systemName: "house.fill")
@@ -25,20 +25,20 @@ struct MainTabView: View {
                 }
                 .tag(0)
             
-            TripListView()
-                .tabItem {
-                    VStack{
-                        Image(systemName: "sun.max.fill")
-                        Text("Trips")
-                    }
-                }
-                .tag(1)
-            
-            AlbumView()
+            SplitView()
                 .tabItem {
                     VStack{
                         Image(systemName: "dollarsign.square")
                         Text("Split")
+                    }
+                }
+                .tag(1)
+            
+            SquadListView()
+                .tabItem {
+                    VStack{
+                        Image(systemName: "person.3.fill")
+                        Text("Squads")
                     }
                 }
                 .tag(2)

@@ -45,6 +45,13 @@ struct Album: Decodable, Identifiable {
     
 }
 
+//class Images: Decodable, Identifiable {
+//
+//    var id: Int
+//    var pathinfo: Photo?
+//    var imageData: Data?
+//}
+
 struct Photo: Decodable, Identifiable {
     
     var id: Int

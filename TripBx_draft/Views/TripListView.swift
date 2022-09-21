@@ -13,44 +13,40 @@ struct TripListView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 0) {
+        NavigationView {
+            VStack(alignment: .leading, spacing: 0) {
             
-            Text("Here are your trips!")
-                .padding([.top, .horizontal], 20)
+            Text("Here are your trips:")
+                .padding(.horizontal, 20)
             
             ScrollView {
                 
                 LazyVStack(spacing: 0) {
                     
-                    // Confirm that currentModule is set
-                    if model.currentSquad != nil {
-                    
-                        ForEach(0..<model.squads.count) { squadIndex in
+                    ForEach(0..<model.squads.count) { squadIndex in
+                        
+                        ForEach(0..<model.squads[squadIndex].trips!.count) { tripIndex in
                             
-                            ForEach(0..<model.squads[squadIndex].trips!.count) { tripIndex in
-                                
-                                
-                                TripCardView(squadIndex: squadIndex, tripIndex: tripIndex)
-//                                NavigationLink(
-//                                    destination:
-//                                        TripView(index: index)
-//                                            .onAppear(perform: {
-//                                                model.openTrip(model.currentSquadIndex, index)
-//                                            }),
-//                                    label: {
-//                                        TripCardView(index: index)
-//                                    })
-                                
-                            }
+                            NavigationLink(
+                                destination:
+                                    TripView(squadIndex: squadIndex, tripIndex: tripIndex)
+                                        .onAppear(perform: {
+                                            model.openTrip(squadIndex, tripIndex)
+                                            model.getImageData()
+                                        }),
+                                label: {
+                                    TripCardView(squadIndex: squadIndex, tripIndex: tripIndex)
+                                })
                         }
                     }
+                    
                 }
                 .accentColor(.black)
-                .padding()
-                .navigationBarTitle("\(model.currentSquad?.name ?? "")")
+                .padding(10)
                 
-
             }
+        }
+            .navigationTitle("Good Day!")
         }
     }
 }

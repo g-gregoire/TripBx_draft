@@ -18,22 +18,30 @@ struct AlbumView: View {
         VStack {
             
             ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
+                if model.imagesData.count == 0 {
+                    ProgressView()
+                }
+                else {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                     ForEach(model.imagesData, id:\.self) { image in
                         if image != nil {
                             let uiImage = UIImage(data: image!)
-                            Image(uiImage: uiImage!)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 160, height: 160)
-                                .clipped()
-                                .cornerRadius(5)
+                            VStack{
+                                Image(uiImage: uiImage!)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 160, height: 160)
+                                    .clipped()
+                                    .cornerRadius(5)
+//                                Text(
+                            }
                         }
                     }
                 }
+                }
             }
         }
-        .navigationBarHidden(true)
+        //.navigationBarHidden(true)
     }
 }
 

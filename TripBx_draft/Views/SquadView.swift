@@ -33,6 +33,7 @@ struct SquadView: View {
                                     TripView(squadIndex: model.currentSquadSelected!, tripIndex: tripIndex)
                                         .onAppear(perform: {
                                             model.openTrip(model.currentSquadSelected!, tripIndex)
+                                            model.getImageData()
                                         }),
                                 label: {
                                     TripCardView(squadIndex: model.currentSquadSelected!, tripIndex: tripIndex)

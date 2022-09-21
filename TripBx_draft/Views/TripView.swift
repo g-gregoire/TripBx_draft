@@ -30,6 +30,7 @@ struct TripView: View {
                     .clipped()
             }
             .ignoresSafeArea(.all, edges: .top)
+//            .ignoresSafeArea()
             
             Text(trip.name)
                 .font(.title)
