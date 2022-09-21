@@ -12,7 +12,7 @@ struct AlbumView: View {
     @EnvironmentObject var model: TripModel
     var body: some View {
         
-        VStack {
+        VStack(alignment: .center) {
             
             ScrollView {
                 // Show scroll until 10 or half the images have loaded
@@ -31,7 +31,6 @@ struct AlbumView: View {
                                     .frame(width: 160, height: 160)
                                     .clipped()
                                     .cornerRadius(5)
-//                                Text(
                             }
                         }
                     }

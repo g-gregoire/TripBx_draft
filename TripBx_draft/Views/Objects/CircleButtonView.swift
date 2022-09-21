@@ -7,27 +7,32 @@
 
 import SwiftUI
 
-struct PhotoButtonView: View {
+struct CircleButtonView: View {
+    
+    var color: Color
+    var letter: String
+    var text: String
     var body: some View {
+        
         
         VStack {
             ZStack {
                 Circle()
-                    .foregroundColor(.green)
+                    .foregroundColor(color)
                     .frame(width: 95, height: 95)
-                Text("P")
+                Text(letter)
                     .foregroundColor(.white)
                     .font(.custom("Arial", size: 50))
             }
-            Text("View Photos")
+            Text(text)
                 .font(.callout)
         }
         
     }
 }
 
-struct PhotoButtonView_Previews: PreviewProvider {
+struct CircleButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoButtonView()
+        CircleButtonView(color: .blue, letter: "P", text: "View Photos")
     }
 }

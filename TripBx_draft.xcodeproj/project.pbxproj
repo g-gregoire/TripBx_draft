@@ -17,7 +17,7 @@
 		C701114B28D27F2E00C0159D /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701114A28D27F2E00C0159D /* AlbumView.swift */; };
 		C7DFDF6D28DA4A6A008C8F5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF6C28DA4A6A008C8F5E /* Constants.swift */; };
 		C7DFDF6F28DA4EB6008C8F5E /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = C7DFDF6E28DA4EB6008C8F5E /* photos.json */; };
-		C7DFDF7428DA9586008C8F5E /* PhotoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF7328DA9586008C8F5E /* PhotoButtonView.swift */; };
+		C7DFDF7428DA9586008C8F5E /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF7328DA9586008C8F5E /* CircleButtonView.swift */; };
 		C7DFDF7628DBACF5008C8F5E /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF7528DBACF5008C8F5E /* SplitView.swift */; };
 		C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */; };
 		C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* SquadListView.swift */; };
@@ -39,7 +39,7 @@
 		C701114A28D27F2E00C0159D /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		C7DFDF6C28DA4A6A008C8F5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C7DFDF6E28DA4EB6008C8F5E /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
-		C7DFDF7328DA9586008C8F5E /* PhotoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButtonView.swift; sourceTree = "<group>"; tabWidth = 25; };
+		C7DFDF7328DA9586008C8F5E /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; tabWidth = 25; };
 		C7DFDF7528DBACF5008C8F5E /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		C7FF898128CBD71100221EBA /* TripBx_draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBx_draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBx_draftApp.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		C7DFDF7028DA9519008C8F5E /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				C7DFDF7328DA9586008C8F5E /* PhotoButtonView.swift */,
+				C7DFDF7328DA9586008C8F5E /* CircleButtonView.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 				C7FF899928CBD8C100221EBA /* Models.swift in Sources */,
 				C70056D728CE91E600A22170 /* SquadView.swift in Sources */,
 				C701114528D27D3E00C0159D /* MainTabView.swift in Sources */,
-				C7DFDF7428DA9586008C8F5E /* PhotoButtonView.swift in Sources */,
+				C7DFDF7428DA9586008C8F5E /* CircleButtonView.swift in Sources */,
 				C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */,
 				C7DFDF7628DBACF5008C8F5E /* SplitView.swift in Sources */,
 				C701114928D27F1600C0159D /* AccountView.swift in Sources */,

@@ -33,22 +33,39 @@ struct TripView: View {
 //            .ignoresSafeArea(.all, edges: .top)
 //            .ignoresSafeArea()
             
-//            Text(trip.name)
-//                .font(.title)
+            VStack(alignment: .leading) {
+                Text(trip.name)
+                    .font(.title)
+                
+                Text("Description: \(trip.description!)")
+                Text("Members: \(trip.users!.count)")
+            }
+            .padding(10)
+            
+            Divider()
+            
+            HStack {
+                Spacer()
+                CircleButtonView(color: .blue, letter: "P", text: "View Photos")
+                Spacer()
+                CircleButtonView(color: .green, letter: "S", text: "View Finances")
+                Spacer()
+            }
+            .padding()
+            
+            Divider()
             
             ScrollView {
                 
                 LazyVStack(spacing: 0) {
-                    
                     AlbumView()
-                    
                 }
-                .accentColor(.black)
                 .padding()
             }
         }
         .navigationTitle(trip.name)
-//        .navigationBarHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 
