@@ -17,6 +17,7 @@
 		C701114B28D27F2E00C0159D /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C701114A28D27F2E00C0159D /* AlbumView.swift */; };
 		C7DFDF6D28DA4A6A008C8F5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF6C28DA4A6A008C8F5E /* Constants.swift */; };
 		C7DFDF6F28DA4EB6008C8F5E /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = C7DFDF6E28DA4EB6008C8F5E /* photos.json */; };
+		C7DFDF7428DA9586008C8F5E /* PhotoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF7328DA9586008C8F5E /* PhotoButtonView.swift */; };
 		C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */; };
 		C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* SquadListView.swift */; };
 		C7FF898928CBD71200221EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898828CBD71200221EBA /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		C701114A28D27F2E00C0159D /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
 		C7DFDF6C28DA4A6A008C8F5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C7DFDF6E28DA4EB6008C8F5E /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
+		C7DFDF7328DA9586008C8F5E /* PhotoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoButtonView.swift; sourceTree = "<group>"; tabWidth = 25; };
 		C7FF898128CBD71100221EBA /* TripBx_draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBx_draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBx_draftApp.swift; sourceTree = "<group>"; };
 		C7FF898628CBD71100221EBA /* SquadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadListView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
+		C7DFDF7028DA9519008C8F5E /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C7DFDF7328DA9586008C8F5E /* PhotoButtonView.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		C7FF897828CBD71100221EBA = {
 			isa = PBXGroup;
 			children = (
@@ -88,7 +98,6 @@
 			children = (
 				C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */,
 				C7FF899228CBD7EB00221EBA /* Views */,
-				C701114C28D7AFF900C0159D /* SubViews */,
 				C7FF899528CBD80000221EBA /* ViewModel */,
 				C7FF899328CBD7F200221EBA /* Models */,
 				C7FF899628CBD80600221EBA /* Resources */,
@@ -117,6 +126,8 @@
 				C70056DA28CE94B300A22170 /* TripView.swift */,
 				C701114828D27F1600C0159D /* AccountView.swift */,
 				C701114A28D27F2E00C0159D /* AlbumView.swift */,
+				C701114C28D7AFF900C0159D /* SubViews */,
+				C7DFDF7028DA9519008C8F5E /* Objects */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -229,6 +240,7 @@
 				C7FF899928CBD8C100221EBA /* Models.swift in Sources */,
 				C70056D728CE91E600A22170 /* SquadView.swift in Sources */,
 				C701114528D27D3E00C0159D /* MainTabView.swift in Sources */,
+				C7DFDF7428DA9586008C8F5E /* PhotoButtonView.swift in Sources */,
 				C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */,
 				C701114928D27F1600C0159D /* AccountView.swift in Sources */,
 				C70056DB28CE94B300A22170 /* TripView.swift in Sources */,

@@ -21,10 +21,18 @@ struct TripView: View {
         
         VStack(alignment: .leading, spacing: 0) {
             
-            Image(trip.image!)
-                .resizable()
-                .frame(width: 95, height: 95)
-                .clipShape(Circle())
+            GeometryReader() { geometry in
+            
+                Image(trip.image!)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .clipped()
+            }
+            .ignoresSafeArea(.all, edges: .top)
+            
+            Text(trip.name)
+                .font(.title)
             
             ScrollView {
                 
@@ -35,13 +43,8 @@ struct TripView: View {
                 }
                 .accentColor(.black)
                 .padding()
-                
-                
-
             }
         }
-        .navigationBarTitle(trip.name)
-        .padding()
     }
 }
 

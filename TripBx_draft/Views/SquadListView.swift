@@ -29,6 +29,7 @@ struct SquadListView: View {
                                     SquadView()
                                     .onAppear(perform: {
                                         model.openSquad(squad.id)
+                                        model.getImageData()
                                     }),
                                 tag: squad.id,
                                 selection: $model.currentSquadSelected) {

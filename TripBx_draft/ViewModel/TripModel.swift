@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class TripModel: ObservableObject, Identifiable {
     
@@ -27,11 +28,14 @@ class TripModel: ObservableObject, Identifiable {
     @Published var currentTripSelected:Int?
     
     @Published var imageData: Data?
+    @Published var images = [Photo]()
+    @Published var imagesData = [Data?]()
     
     init() {
         
         // Parse local included json data
         getLocalData()
+//        getImageData()
         
     }
     
@@ -59,23 +63,48 @@ class TripModel: ObservableObject, Identifiable {
         }
     }
     
-    func getImageData(hostURL:String, photoPath:String) {
+    func getImageData() {
         
-        let imageURL = hostURL + photoPath
+        // Get a url to the json file
+        let jsonUrl = Bundle.main.url(forResource: "photos", withExtension: "json")
         
-        if let url = URL(string: imageURL) {
+        do {
+            // Read the file into a data object
+            let jsonData = try Data(contentsOf: jsonUrl!)
             
-            let session = URLSession.shared
-            let dataTask = session.dataTask(with: url) { data, response, error in
-                
-                if error == nil {
-                    DispatchQueue.main.async {
-                        self.imageData = data!
+            // Try to decode the json into an array of modules
+            let jsonDecoder = JSONDecoder()
+            let imagesJSON = try jsonDecoder.decode([Photo].self, from: jsonData)
+            
+            // Assign parsed modules to modules property
+            self.images = imagesJSON
+        }
+        catch {
+            // TODO log error
+            print("Couldn't parse local data")
+        }
+        
+        // once decoded, pull imgae from from storage
+        for image in images {
+            
+            let imageURL = Constants.fileStoreURL + image.path
+//            let imageURL = "https://g-gregoire.github.io/tripBx_Repo/pics/2DCCFFED-F2CD-4B9F-B675-135A491D117F.JPG"
+
+            if let url = URL(string: imageURL) {
+
+                let session = URLSession.shared
+                let dataTask = session.dataTask(with: url) { data, response, error in
+
+                    if error == nil {
+                        DispatchQueue.main.async {
+                            self.imagesData += [data!]
+                        }
                     }
                 }
+                dataTask.resume()
             }
-            dataTask.resume()
         }
+            
     }
     
 //    func getRemoteData() {
