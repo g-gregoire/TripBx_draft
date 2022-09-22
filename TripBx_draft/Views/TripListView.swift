@@ -16,35 +16,35 @@ struct TripListView: View {
         NavigationView {
             VStack(alignment: .leading, spacing: 0) {
             
-            Text("Here are your trips:")
-                .padding(.horizontal, 20)
-            
-            ScrollView {
+                Text("Here are your trips:")
+                    .padding(.horizontal, 20)
                 
-                LazyVStack(spacing: 0) {
+                ScrollView {
                     
-                    ForEach(0..<model.squads.count) { squadIndex in
+                    LazyVStack(spacing: 0) {
                         
-                        ForEach(0..<model.squads[squadIndex].trips!.count) { tripIndex in
+                        ForEach(0..<model.squads.count) { squadIndex in
                             
-                            NavigationLink(
-                                destination:
-                                    TripView(squadIndex: squadIndex, tripIndex: tripIndex)
-                                        .onAppear(perform: {
-                                            model.openTrip(squadIndex, tripIndex)
-                                            model.getImageData()
-                                        }),
-                                label: {
-                                    TripCardView(squadIndex: squadIndex, tripIndex: tripIndex)
-                                })
+                            ForEach(0..<model.squads[squadIndex].trips!.count) { tripIndex in
+                                
+                                NavigationLink(
+                                    destination:
+                                        TripView(squadIndex: squadIndex, tripIndex: tripIndex)
+                                            .onAppear(perform: {
+                                                model.openTrip(squadIndex, tripIndex)
+                                                model.getImageData()
+                                            }),
+                                    label: {
+                                        TripCardView(squadIndex: squadIndex, tripIndex: tripIndex)
+                                    })
+                            }
                         }
+                        
                     }
+                    .accentColor(.black)
+                    .padding(10)
                     
                 }
-                .accentColor(.black)
-                .padding(10)
-                
-            }
         }
             .navigationTitle("Good Day!")
         }

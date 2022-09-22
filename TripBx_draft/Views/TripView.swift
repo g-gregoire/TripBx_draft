@@ -19,53 +19,56 @@ struct TripView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading, spacing: 0) {
-            
-            GeometryReader() { geometry in
-            
-                Image(trip.image!)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .clipped()
-            }
-            .frame(height: 150)
-//            .ignoresSafeArea(.all, edges: .top)
-//            .ignoresSafeArea()
-            
-            VStack(alignment: .leading) {
-                Text(trip.name)
-                    .font(.title)
+        ScrollView(showsIndicators: false) {
+            LazyVStack(alignment: .leading, spacing: 0, pinnedViews:[.sectionHeaders]) {
                 
-                Text("Description: \(trip.description!)")
-                Text("Members: \(trip.users!.count)")
-            }
-            .padding(10)
-            
-            Divider()
-            
-            HStack {
-                Spacer()
-                CircleButtonView(color: .blue, letter: "P", text: "View Photos")
-                Spacer()
-                CircleButtonView(color: .green, letter: "S", text: "View Finances")
-                Spacer()
-            }
-            .padding()
-            
-            Divider()
-            
-            ScrollView {
+                GeometryReader() { geometry in
                 
-                LazyVStack(spacing: 0) {
-                    AlbumView()
+                    Image(trip.image!)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipped()
+                }
+                .frame(height: 150)
+    //            .ignoresSafeArea(.all, edges: .top)
+    //            .ignoresSafeArea()
+                
+                VStack(alignment: .leading) {
+                    Text(trip.name)
+                        .font(Font.custom("Avenir Heavy", size: 28))
+                    
+                    Text("Description: \(trip.description!)")
+                        .font(Font.custom("Avenir", size: 16))
+                    Text("Members: \(trip.users!.count)")
+                        .font(Font.custom("Avenir", size: 16))
+                }
+                .padding(10)
+                
+                Divider()
+                
+                HStack {
+                    Spacer()
+                    CircleButtonView(color: .blue, letter: "P", text: "View Photos")
+                    Spacer()
+                    CircleButtonView(color: .green, letter: "S", text: "View Finances")
+                    Spacer()
                 }
                 .padding()
+                
+                Divider()
+                
+                ScrollView {
+                    
+                    LazyVStack(spacing: 0) {
+                        AlbumView()
+                    }
+                    .padding()
+                }
             }
+            .navigationTitle(trip.name)
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle(trip.name)
-        .navigationBarTitleDisplayMode(.inline)
-        
     }
 }
 

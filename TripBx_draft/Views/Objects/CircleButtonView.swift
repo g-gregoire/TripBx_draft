@@ -19,13 +19,14 @@ struct CircleButtonView: View {
             ZStack {
                 Circle()
                     .foregroundColor(color)
-                    .frame(width: 95, height: 95)
+                    .frame(width: 80, height: 80)
+                    .shadow(radius: 15, x: -10, y: 10)
                 Text(letter)
                     .foregroundColor(.white)
-                    .font(.custom("Arial", size: 50))
+                    .font(.custom("Avenir", size: 50))
             }
             Text(text)
-                .font(.callout)
+                .font(Font.custom("Avenir", size: 14))
         }
         
     }

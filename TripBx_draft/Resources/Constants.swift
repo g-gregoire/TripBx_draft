@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Constants {
     
     static var fileStoreURL = "https://g-gregoire.github.io/tripBx_Repo/pics/"
-    
+        
 }
