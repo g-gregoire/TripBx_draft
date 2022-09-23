@@ -63,7 +63,7 @@ struct TripCardView: View {
                             .resizable()
                             .frame(width: 15, height: 15)
                         Text("$0.00")
-                            .font(Font.custom("Avenir", size: 10))
+                            .font(Font.custom("Avenir", size: 12))
                         Spacer()
                         
                     }

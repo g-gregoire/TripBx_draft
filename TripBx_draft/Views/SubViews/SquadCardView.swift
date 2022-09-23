@@ -28,6 +28,7 @@ struct SquadCardView: View {
 
                 Image(image)
                     .resizable()
+                    .scaledToFill()
                     .frame(width: 95, height: 95)
                     .clipShape(Circle())
                 

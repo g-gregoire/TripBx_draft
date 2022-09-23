@@ -43,7 +43,6 @@ struct AlbumView: View {
                     }
                 }
             }
-            .frame(height: 600)
         }
         //.navigationBarHidden(true)
     }

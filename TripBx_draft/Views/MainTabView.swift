@@ -16,7 +16,7 @@ struct MainTabView: View {
         
         TabView (selection: $tabIndex) {
             
-            TripListView()
+            HomeView()
                 .tabItem {
                     VStack{
                         Image(systemName: "house.fill")
@@ -55,6 +55,7 @@ struct MainTabView: View {
             
         }
         .tabViewStyle(.automatic)
+        .background(.white)
     }
 }
 
