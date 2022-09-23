@@ -1,15 +1,14 @@
 //
-//  PhotoButtonView.swift
+//  AddNewView.swift
 //  TripBx_draft
 //
-//  Created by Georges Gregoire on 2022-09-20.
+//  Created by Georges Gregoire on 2022-09-22.
 //
 
 import SwiftUI
 
-struct CircleButtonView: View {
+struct AddNewView: View {
     
-    var color: Color
     var letter: String
     var text: String
     var body: some View {
@@ -18,9 +17,9 @@ struct CircleButtonView: View {
         VStack {
             ZStack {
                 Circle()
-                    .foregroundColor(color)
+                    .foregroundColor(Color(UIColor(displayP3Red: 0.5, green: 0.5, blue: 0.5, alpha: 0.4)))
                     .frame(width: 70, height: 70)
-                    .shadow(radius: 15, x: -10, y: 10)
+                    .shadow(radius: 10, x: -10, y: 10)
                 Text(letter)
                     .foregroundColor(.white)
                     .font(.custom("Avenir", size: 40))
@@ -32,8 +31,8 @@ struct CircleButtonView: View {
     }
 }
 
-struct CircleButtonView_Previews: PreviewProvider {
+struct AddNewView_Previews: PreviewProvider {
     static var previews: some View {
-        CircleButtonView(color: .blue, letter: "P", text: "View Photos")
+        AddNewView(letter: "+", text: "Add New")
     }
 }

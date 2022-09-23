@@ -32,7 +32,9 @@ struct TripListView: View {
                                         TripView(squadIndex: squadIndex, tripIndex: tripIndex)
                                             .onAppear(perform: {
                                                 model.openTrip(squadIndex, tripIndex)
-                                                model.getImageData()
+                                                if model.imagesData.count == 0 {
+                                                    model.getImageData()
+                                                }
                                             }),
                                     label: {
                                         TripCardView(squadIndex: squadIndex, tripIndex: tripIndex)

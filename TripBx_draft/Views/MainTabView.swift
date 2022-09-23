@@ -25,7 +25,7 @@ struct MainTabView: View {
                 }
                 .tag(0)
             
-            SplitView()
+            SplitListView()
                 .tabItem {
                     VStack{
                         Image(systemName: "dollarsign.square")

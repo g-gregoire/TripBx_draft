@@ -31,8 +31,6 @@ struct TripView: View {
                         .clipped()
                 }
                 .frame(height: 150)
-    //            .ignoresSafeArea(.all, edges: .top)
-    //            .ignoresSafeArea()
                 
                 VStack(alignment: .leading) {
                     Text(trip.name)
@@ -47,14 +45,25 @@ struct TripView: View {
                 
                 Divider()
                 
-                HStack {
-                    Spacer()
-                    CircleButtonView(color: .blue, letter: "P", text: "View Photos")
-                    Spacer()
-                    CircleButtonView(color: .green, letter: "S", text: "View Finances")
-                    Spacer()
+                LazyHGrid(rows: [GridItem(.flexible())], spacing: 15) {
+                    NavigationLink {
+                        AlbumView()
+                    } label: {
+                        CircleButtonView(color: .blue, letter: "P", text: "Add Photos")
+                    }
+                    .foregroundColor(.black)
+                    
+                    NavigationLink {
+                        SplitView()
+                    } label: {
+                        CircleButtonView(color: .green, letter: "S", text: "Add Finances")
+                    }
+                    .foregroundColor(.black)
+
+                    AddNewView(letter: "+", text: "Add New...")
                 }
-                .padding()
+                .padding(.horizontal, 30)
+                .padding(.vertical, 10)
                 
                 Divider()
                 
