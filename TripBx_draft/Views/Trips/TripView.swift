@@ -30,11 +30,11 @@ struct TripView: View {
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .clipped()
                 }
-                .frame(height: 150)
+                .frame(height: 120)
                 
                 VStack(alignment: .leading) {
                     Text(trip.name)
-                        .font(Font.custom("Avenir Heavy", size: 28))
+                        .font(Font.custom("Avenir Heavy", size: 24))
                     
                     Text("Description: \(trip.description!)")
                         .font(Font.custom("Avenir", size: 16))
@@ -62,9 +62,27 @@ struct TripView: View {
 
                     AddNewView(letter: "+", text: "Add New...")
                 }
-                .padding(.horizontal, 30)
+                .padding(.horizontal, 10)
                 .padding(.vertical, 10)
                 
+                Divider()
+                
+                NavigationLink {
+                    SplitView()
+                } label: {
+                    VStack(alignment: .leading) {
+                        Text("Trip Finances")
+                            .font(Font.custom("Avenir Heavy", size: 20))
+                        
+                        Text("Total Spent: \(trip.description!)")
+                            .font(Font.custom("Avenir", size: 16))
+                        Text("Total Transactions: \(trip.users!.count)")
+                            .font(Font.custom("Avenir", size: 16))
+                    }
+                    .padding(10)
+                }
+                .foregroundColor(.black)
+
                 Divider()
                 
                 AlbumPreview()
