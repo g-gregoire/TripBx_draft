@@ -25,23 +25,23 @@ struct TripCardView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .shadow(radius: 5)
-                .aspectRatio(CGSize(width: 335, height: 110), contentMode: .fit)
+                .aspectRatio(CGSize(width: 335, height: 90), contentMode: .fit)
             
             HStack {
 
                 Image(trip.image!)
                     .resizable()
-                    .frame(width: 95, height: 95)
+                    .frame(width: 80, height: 80)
                     .clipShape(Circle())
                 
                 Spacer()
                 
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .leading, spacing: 5) {
                     Text(trip.name)
-                        .bold()
+                        .font(Font.custom("Avenir Heavy", size: 16))
                     Text(trip.description!)
-                        .padding(.bottom, 10)
-                        .font(.caption)
+                        .padding(.bottom, 5)
+                        .font(Font.custom("Avenir", size: 12))
                     
                     // Icons
                     HStack {
@@ -50,10 +50,24 @@ struct TripCardView: View {
                         Image(systemName: "person.2")
                             .resizable()
                             .frame(width: 15, height: 15)
-                        Text("Members: \(String(trip.users!.count))")
-                            .font(Font.system(size: 10))
+                        Text(String(trip.users!.count))
+                            .font(Font.custom("Avenir", size: 12))
+                        Spacer()
+                        Image(systemName: "photo")
+                            .resizable()
+                            .frame(width: 15, height: 15)
+                        Text(String(model.imagesData.count))
+                            .font(Font.custom("Avenir", size: 12))
+                        Spacer()
+                        Image(systemName: "dollarsign.square.fill")
+                            .resizable()
+                            .frame(width: 15, height: 15)
+                        Text("$0.00")
+                            .font(Font.custom("Avenir", size: 10))
+                        Spacer()
                         
                     }
+                    .padding(.vertical, 5)
                 }
                 .frame(width: 200, height: 95, alignment: .leading)
             }

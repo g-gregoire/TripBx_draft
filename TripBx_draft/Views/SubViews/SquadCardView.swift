@@ -35,10 +35,10 @@ struct SquadCardView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text(name)
-                        .bold()
+                        .font(Font.custom("Avenir Heavy", size: 16))
                     Text(desc)
                         .padding(.bottom, 10)
-                        .font(.caption)
+                        .font(Font.custom("Avenir", size: 12))
                     
                     // Icons
                     HStack {
@@ -47,7 +47,7 @@ struct SquadCardView: View {
                             .resizable()
                             .frame(width: 15, height: 15)
                         Text("Members: \(String(memberCount))")
-                            .font(Font.system(size: 10))
+                            .font(Font.custom("Avenir", size: 10))
                     }
                 }
                 .frame(width: 200, height: 95, alignment: .leading)
