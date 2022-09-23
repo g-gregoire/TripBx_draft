@@ -67,13 +67,15 @@ struct TripView: View {
                 
                 Divider()
                 
-                ScrollView {
-                    
-                    LazyVStack(spacing: 0) {
-                        AlbumView()
-                    }
-                    .padding()
-                }
+                AlbumPreview()
+                
+//                ScrollView {
+//
+//                    LazyVStack(spacing: 0) {
+//                        AlbumView()
+//                    }
+//                    .padding()
+//                }
             }
             .navigationTitle(trip.name)
             .navigationBarTitleDisplayMode(.inline)

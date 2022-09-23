@@ -21,6 +21,7 @@
 		C7DFDF7628DBACF5008C8F5E /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF7528DBACF5008C8F5E /* SplitView.swift */; };
 		C7DFDF7A28DD345D008C8F5E /* SplitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF7928DD345D008C8F5E /* SplitListView.swift */; };
 		C7DFDF8128DD38A4008C8F5E /* AddNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF8028DD38A4008C8F5E /* AddNewView.swift */; };
+		C7DFDF8328DD4193008C8F5E /* AlbumPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DFDF8228DD4193008C8F5E /* AlbumPreview.swift */; };
 		C7FF898528CBD71100221EBA /* TripBx_draftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */; };
 		C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FF898628CBD71100221EBA /* SquadListView.swift */; };
 		C7FF898928CBD71200221EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7FF898828CBD71200221EBA /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		C7DFDF7528DBACF5008C8F5E /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		C7DFDF7928DD345D008C8F5E /* SplitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitListView.swift; sourceTree = "<group>"; };
 		C7DFDF8028DD38A4008C8F5E /* AddNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewView.swift; sourceTree = "<group>"; };
+		C7DFDF8228DD4193008C8F5E /* AlbumPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPreview.swift; sourceTree = "<group>"; };
 		C7FF898128CBD71100221EBA /* TripBx_draft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripBx_draft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FF898428CBD71100221EBA /* TripBx_draftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripBx_draftApp.swift; sourceTree = "<group>"; };
 		C7FF898628CBD71100221EBA /* SquadListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadListView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C701114A28D27F2E00C0159D /* AlbumView.swift */,
+				C7DFDF8228DD4193008C8F5E /* AlbumPreview.swift */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				C701114528D27D3E00C0159D /* MainTabView.swift in Sources */,
 				C7DFDF7428DA9586008C8F5E /* CircleButtonView.swift in Sources */,
 				C7DFDF8128DD38A4008C8F5E /* AddNewView.swift in Sources */,
+				C7DFDF8328DD4193008C8F5E /* AlbumPreview.swift in Sources */,
 				C7FF898728CBD71100221EBA /* SquadListView.swift in Sources */,
 				C7DFDF7628DBACF5008C8F5E /* SplitView.swift in Sources */,
 				C701114928D27F1600C0159D /* AccountView.swift in Sources */,

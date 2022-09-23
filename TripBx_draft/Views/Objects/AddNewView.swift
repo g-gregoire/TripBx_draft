@@ -22,7 +22,7 @@ struct AddNewView: View {
                     .shadow(radius: 10, x: -10, y: 10)
                 Text(letter)
                     .foregroundColor(.white)
-                    .font(.custom("Avenir", size: 40))
+                    .font(.custom("Avenir", size: 55))
             }
             Text(text)
                 .font(Font.custom("Avenir", size: 13))

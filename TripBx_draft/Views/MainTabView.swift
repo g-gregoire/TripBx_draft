@@ -14,7 +14,7 @@ struct MainTabView: View {
     
     var body: some View {
         
-        TabView (selection: $tabIndex){
+        TabView (selection: $tabIndex) {
             
             TripListView()
                 .tabItem {
@@ -54,8 +54,7 @@ struct MainTabView: View {
                 .tag(3)
             
         }
-        
-        
+        .tabViewStyle(.automatic)
     }
 }
 
