@@ -33,7 +33,7 @@ struct AlbumView: View {
                                         Image(uiImage: uiImage!)
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: geo.size.width/3, height: geo.size.width/3)
+                                            .frame(width: (geo.size.width/3)-3, height: (geo.size.width/3)-3)
                                             .clipped()
                                             .cornerRadius(5)
                                     }
@@ -42,6 +42,7 @@ struct AlbumView: View {
                         }
                     }
                 }
+                .padding(5)
             }
         }
         //.navigationBarHidden(true)

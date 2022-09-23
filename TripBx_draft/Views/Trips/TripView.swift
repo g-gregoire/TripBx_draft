@@ -30,7 +30,7 @@ struct TripView: View {
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .clipped()
                 }
-                .frame(height: 120)
+                .frame(height: 150)
                 
                 VStack(alignment: .leading) {
                     Text(trip.name)
@@ -60,10 +60,10 @@ struct TripView: View {
                     }
                     .foregroundColor(.black)
 
-                    AddNewView(letter: "+", text: "Add New...")
+                    AddNewView(letter: "+", text: "Add New...", size: 70)
                 }
                 .padding(.horizontal, 10)
-                .padding(.vertical, 10)
+                .padding(.vertical, 5)
                 
                 Divider()
                 
@@ -75,13 +75,14 @@ struct TripView: View {
                             Text("Trip Finances")
                                 .font(Font.custom("Avenir Heavy", size: 20))
                             
-                            Text("Total Spent: \(trip.description!)")
-                                .font(Font.custom("Avenir", size: 16))
+                            Text("Total Spent: $0.00")
+                                .font(Font.custom("Avenir", size: 14))
                             Text("Total Transactions: \(trip.users!.count)")
-                                .font(Font.custom("Avenir", size: 16))
+                                .font(Font.custom("Avenir", size: 14))
                         }
                         Spacer()
                         Image(systemName: "chevron.right")
+                            .padding(.trailing, 5)
                     }
                     .padding(10)
                 }
@@ -102,6 +103,7 @@ struct TripView: View {
             .navigationTitle(trip.name)
             .navigationBarTitleDisplayMode(.inline)
         }
+//        .ignoresSafeArea()
     }
 }
 

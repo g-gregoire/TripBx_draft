@@ -28,6 +28,8 @@ struct HomeView: View {
                     .padding(.horizontal, 15)
                     .padding(.vertical, 10)
                 
+                
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     LazyHGrid(rows: [GridItem(.flexible())], spacing: 5) {
                         ForEach(0..<model.squads.count) { squadIndex in
@@ -45,15 +47,23 @@ struct HomeView: View {
                                 }
                                 .accentColor(.black)
                         }
+                        
+                        // Add Plus Button
+                        AddNewSquad()
                     }
                     .padding(.horizontal, 10)
                 }
-                .frame(height: 120)
+                .padding(.bottom, 5)
+                .frame(height: 115)
+                
+                Divider()
+                    .padding(.horizontal, 10)
             
                 Text("Trips:")
                     .font(Font.custom("Avenir Heavy", size: 24))
                     .padding(.horizontal, 15)
                     .padding(.top, 10)
+                    .padding(.bottom, 5)
                 
                 ScrollView {
                     
@@ -77,11 +87,9 @@ struct HomeView: View {
                                     })
                             }
                         }
-                        
                     }
                     .accentColor(.black)
-                    .padding(10)
-                    
+                    .padding(.horizontal, 10)
                 }
             }
             //.navigationTitle("Good Day!")

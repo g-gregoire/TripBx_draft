@@ -45,7 +45,6 @@ struct TripCardView: View {
                     
                     // Icons
                     HStack {
-                        
                         // Number of lessons/questions
                         Image(systemName: "person.2")
                             .resizable()
@@ -65,7 +64,6 @@ struct TripCardView: View {
                         Text("$0.00")
                             .font(Font.custom("Avenir", size: 12))
                         Spacer()
-                        
                     }
                     .padding(.vertical, 5)
                 }

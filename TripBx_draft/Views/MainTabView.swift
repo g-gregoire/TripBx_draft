@@ -38,7 +38,7 @@ struct MainTabView: View {
                 .tabItem {
                     VStack{
                         Image(systemName: "person.3.fill")
-                        Text("Squads")
+                        Text("Your Squads")
                     }
                 }
                 .tag(2)

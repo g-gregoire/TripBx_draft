@@ -23,6 +23,7 @@ struct AlbumPreview: View {
                     Image(systemName: "chevron.right")
                     Spacer()
                 }
+                .padding(.bottom, 5)
                     // Show preview until 8 or half the images have loaded
                     if model.imagesData.count < 8 || model.imagesData.count < model.images.count/2 {
                         ProgressView()
@@ -39,13 +40,13 @@ struct AlbumPreview: View {
                                         Image(uiImage: uiImage!)
                                             .resizable()
                                             .scaledToFill()
-                                            .frame(width: geo.size.width/4, height: geo.size.height/2)
+                                            .frame(width: geo.size.width/4, height: geo.size.width/4)
                                             .clipped()
                                 }
                             }
                         }
                     }
-                    .frame(height: 200)
+                    .frame(height: 170)
                 }
             }
             .foregroundColor(.black) 

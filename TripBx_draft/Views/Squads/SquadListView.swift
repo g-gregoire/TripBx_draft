@@ -15,38 +15,35 @@ struct SquadListView: View {
         
         NavigationView {
             VStack(alignment: .leading) {
-                Text("Here are your Squads:")
+                Text("Your squads are used to contain your trips.")
+                    .font(Font.custom("Avenir", size: 16))
                     .padding()
                 
                 ScrollView {
                     
                     LazyVStack (spacing: 0) {
                     
-                        ForEach(model.squads) { squad in
+                        ForEach(0..<model.squads.count) { squadIndex in
                             
                             NavigationLink(
                                 destination:
                                     SquadView()
                                     .onAppear(perform: {
-                                        model.openSquad(squad.id)
+                                        model.openSquad(squadIndex)
                                     }),
-                                tag: squad.id,
+                                tag: squadIndex,
                                 selection: $model.currentSquadSelected) {
                                     // Squad Card
-                                    SquadCardView(name: squad.name, desc: squad.description!, image: squad.image!, memberCount: squad.users!.count)
+                                    SquadCardView(squadIndex: squadIndex)
                                         .padding(.horizontal, 10)
                                     
                                 }
                                 .accentColor(.black)
-                            
-                            
                         }
                     }
                 }
-                
-                
             }
-            .navigationTitle("Good Day!")
+            .navigationTitle("Squads")
         }
         .navigationViewStyle(.stack)
         

@@ -11,6 +11,7 @@ struct AddNewView: View {
     
     var letter: String
     var text: String
+    var size: CGFloat
     var body: some View {
         
         
@@ -18,7 +19,7 @@ struct AddNewView: View {
             ZStack {
                 Circle()
                     .foregroundColor(Color(UIColor(displayP3Red: 0.5, green: 0.5, blue: 0.5, alpha: 0.4)))
-                    .frame(width: 70, height: 70)
+                    .frame(width: size, height: size)
                     .shadow(radius: 10, x: -10, y: 10)
                 Text(letter)
                     .foregroundColor(.white)
@@ -33,6 +34,6 @@ struct AddNewView: View {
 
 struct AddNewView_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewView(letter: "+", text: "Add New")
+        AddNewView(letter: "+", text: "Add New", size: 70)
     }
 }
