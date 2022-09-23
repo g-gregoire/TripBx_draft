@@ -16,8 +16,13 @@ struct AlbumPreview: View {
             AlbumView()
         } label: {
             VStack(alignment: .leading, spacing: 5) {
-                Text("Trip Photos")
-                    .font(Font.custom("Avenir Heavy", size: 20))
+                HStack {
+                    Text("Trip Photos")
+                        .font(Font.custom("Avenir Heavy", size: 20))
+
+                    Image(systemName: "chevron.right")
+                    Spacer()                    
+                }
                     // Show preview until 8 or half the images have loaded
                     if model.imagesData.count < 8 || model.imagesData.count < model.images.count/2 {
                         ProgressView()

@@ -70,14 +70,18 @@ struct TripView: View {
                 NavigationLink {
                     SplitView()
                 } label: {
-                    VStack(alignment: .leading) {
-                        Text("Trip Finances")
-                            .font(Font.custom("Avenir Heavy", size: 20))
-                        
-                        Text("Total Spent: \(trip.description!)")
-                            .font(Font.custom("Avenir", size: 16))
-                        Text("Total Transactions: \(trip.users!.count)")
-                            .font(Font.custom("Avenir", size: 16))
+                    HStack{
+                        VStack(alignment: .leading) {
+                            Text("Trip Finances")
+                                .font(Font.custom("Avenir Heavy", size: 20))
+                            
+                            Text("Total Spent: \(trip.description!)")
+                                .font(Font.custom("Avenir", size: 16))
+                            Text("Total Transactions: \(trip.users!.count)")
+                                .font(Font.custom("Avenir", size: 16))
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
                     }
                     .padding(10)
                 }
