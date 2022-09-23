@@ -70,6 +70,9 @@ struct TripCardView: View {
                     .padding(.vertical, 5)
                 }
                 .frame(width: 200, height: 95, alignment: .leading)
+                .padding(.leading,10)
+                
+                Spacer()
             }
             .padding(.horizontal, 20)
         }
